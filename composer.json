@@ -1,5 +1,5 @@
 {
-    "name": "brackets/admin-auth",
+    "name": "craftable/admin-auth",
     "description": "Authentication interface for brackets/admin-ui",
     "keywords": [
         "auth",
@@ -28,10 +28,10 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "brackets/admin-ui": "^3.0",
+        "craftable/admin-ui": "^3.0",
         "illuminate/support": "5.5.*|5.6.*|5.7.*",
         "spatie/laravel-permission": "^2.5",
-        "brackets/media": "^3.0"
+        "craftable/media": "^3.0"
     },
     "require-dev": {
         "orchestra/testbench": "~3.5|~3.6|~3.7",
