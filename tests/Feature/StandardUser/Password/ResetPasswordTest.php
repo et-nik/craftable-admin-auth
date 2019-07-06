@@ -49,7 +49,7 @@ class ResetPasswordTest extends StandardTestCase
     /** @test */
     public function can_see_reset_password_form()
     {
-        $response = $this->get(route('brackets/admin-auth::admin/password/showResetForm', ['token' => $this->token]));
+        $response = $this->get(route('craftable/admin-auth::admin/password/showResetForm', ['token' => $this->token]));
         $response->assertStatus(200);
     }
 

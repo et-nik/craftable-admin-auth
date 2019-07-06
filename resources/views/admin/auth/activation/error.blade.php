@@ -1,6 +1,6 @@
-@extends('brackets/admin-ui::admin.layout.master')
+@extends('craftable/admin-ui::admin.layout.master')
 
-@section('title', trans('brackets/admin-auth::admin.activation_form.title'))
+@section('title', trans('craftable/admin-auth::admin.activation_form.title'))
 
 @section('content')
     <div class="container" id="app">
@@ -17,10 +17,10 @@
                                   novalidate>
                                 {{ csrf_field() }}
                                 <div class="auth-header">
-                                    <h1 class="auth-title">{{ trans('brackets/admin-auth::admin.activation_form.title') }}</h1>
+                                    <h1 class="auth-title">{{ trans('craftable/admin-auth::admin.activation_form.title') }}</h1>
                                 </div>
                                 <div class="auth-body">
-                                    @include('brackets/admin-auth::admin.auth.includes.messages')
+                                    @include('craftable/admin-auth::admin.auth.includes.messages')
                                 </div>
                             </form>
                         </auth-form>

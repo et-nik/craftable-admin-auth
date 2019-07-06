@@ -1,4 +1,4 @@
-@extends('brackets/admin-ui::admin.layout.default')
+@extends('craftable/admin-ui::admin.layout.default')
 
 @section('body')
 

@@ -53,7 +53,7 @@ class ActivationEmailController extends Controller
     public function showLinkRequestForm()
     {
         if (config('admin-auth.self_activation_form_enabled')) {
-            return view('brackets/admin-auth::admin.auth.activation.email');
+            return view('craftable/admin-auth::admin.auth.activation.email');
         } else {
             abort(404);
         }
@@ -107,7 +107,7 @@ class ActivationEmailController extends Controller
      */
     protected function sendActivationLinkResponse(Request $request, $response)
     {
-        $message = trans('brackets/admin-auth::admin.activations.sent');
+        $message = trans('craftable/admin-auth::admin.activations.sent');
         return back()->with('status', $message);
     }
 
@@ -122,7 +122,7 @@ class ActivationEmailController extends Controller
     {
         $message = trans($response);
         if ($response == Activation::ACTIVATION_DISABLED) {
-            $message = trans('brackets/admin-auth::admin.activations.disabled');
+            $message = trans('craftable/admin-auth::admin.activations.disabled');
         }
         return back()->withErrors(
             ['email' => $message]

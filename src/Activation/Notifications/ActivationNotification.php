@@ -46,8 +46,8 @@ class ActivationNotification extends Notification
     {
         //TODO change to template?
         return (new MailMessage)
-            ->line(trans('brackets/admin-auth::activations.email.line'))
-            ->action(trans('brackets/admin-auth::activations.email.action'), route('brackets/admin-auth::admin/activation/activate', $this->token))
-            ->line(trans('brackets/admin-auth::activations.email.notRequested'));
+            ->line(trans('craftable/admin-auth::activations.email.line'))
+            ->action(trans('craftable/admin-auth::activations.email.action'), route('craftable/admin-auth::admin/activation/activate', $this->token))
+            ->line(trans('craftable/admin-auth::activations.email.notRequested'));
     }
 }

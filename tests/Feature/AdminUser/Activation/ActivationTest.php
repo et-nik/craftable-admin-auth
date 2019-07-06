@@ -68,7 +68,7 @@ class ActivationTest extends BracketsTestCase
     {
         $user = $this->createTestUser(false);
 
-        $response = $this->get(route('brackets/admin-auth::admin/activation/activate', ['token' => $this->token]));
+        $response = $this->get(route('craftable/admin-auth::admin/activation/activate', ['token' => $this->token]));
         $response->assertStatus(302);
 
         $userNew = TestBracketsUserModel::where('email', 'john@example.com')->first();
@@ -87,7 +87,7 @@ class ActivationTest extends BracketsTestCase
     {
         $user = $this->createTestUser(false);
 
-        $response = $this->get(route('brackets/admin-auth::admin/activation/activate',
+        $response = $this->get(route('craftable/admin-auth::admin/activation/activate',
             ['token' => $this->token . '11']));
         $response->assertStatus(302);
 
@@ -106,7 +106,7 @@ class ActivationTest extends BracketsTestCase
     {
         $user = $this->createTestUser(false, false, true);
 
-        $response = $this->get(route('brackets/admin-auth::admin/activation/activate', ['token' => $this->token]));
+        $response = $this->get(route('craftable/admin-auth::admin/activation/activate', ['token' => $this->token]));
         $response->assertStatus(302);
 
         $userNew = TestBracketsUserModel::where('email', 'john@example.com')->first();
@@ -124,7 +124,7 @@ class ActivationTest extends BracketsTestCase
     {
         $user = $this->createTestUser(false, false, false, Carbon::now()->subDays(10));
 
-        $response = $this->get(route('brackets/admin-auth::admin/activation/activate', ['token' => $this->token]));
+        $response = $this->get(route('craftable/admin-auth::admin/activation/activate', ['token' => $this->token]));
         $response->assertStatus(302);
 
         $userNew = TestBracketsUserModel::where('email', 'john@example.com')->first();

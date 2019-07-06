@@ -18,7 +18,7 @@ class AdminAuthInstall extends Command
      *
      * @var string
      */
-    protected $description = 'Install a brackets/admin-auth package';
+    protected $description = 'Install a craftable/admin-auth package';
 
     /**
      * Execute the console command.
@@ -27,7 +27,7 @@ class AdminAuthInstall extends Command
      */
     public function handle()
     {
-        $this->info('Installing package brackets/admin-auth');
+        $this->info('Installing package craftable/admin-auth');
 
         $this->call('admin-ui:install');
 
@@ -44,13 +44,13 @@ class AdminAuthInstall extends Command
             '|url\(\'admin\/logout\'\)|',
             '{{-- Do not delete me :) I\'m used for auto-generation menu items --}}',
             '{{-- Do not delete me :) I\'m used for auto-generation menu items --}}
-    <a href="{{ url(\'admin/logout\') }}" class="dropdown-item"><i class="fa fa-lock"></i> {{ trans(\'brackets/admin-auth::admin.profile_dropdown.logout\') }}</a>');
+    <a href="{{ url(\'admin/logout\') }}" class="dropdown-item"><i class="fa fa-lock"></i> {{ trans(\'craftable/admin-auth::admin.profile_dropdown.logout\') }}</a>');
 
         $this->appendAdminAuthToAuthConfig();
 
         $this->call('migrate');
 
-        $this->info('Package brackets/admin-auth installed');
+        $this->info('Package craftable/admin-auth installed');
     }
 
     /**

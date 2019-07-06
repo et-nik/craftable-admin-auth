@@ -17,7 +17,7 @@ class Handler extends ParentHandler
     protected function unauthenticated($request, AuthenticationException $exception)
     {
         if (substr($request->getRequestUri(), 0, 6) === '/admin') {
-            $url = route('brackets/admin-auth::admin/login');
+            $url = route('craftable/admin-auth::admin/login');
         } else {
             $url = route('login');
         }

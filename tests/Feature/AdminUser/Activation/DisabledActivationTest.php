@@ -92,7 +92,7 @@ class DisabledActivationTest extends BracketsTestCase
     {
         $user = $this->createTestUser(false);
 
-        $response = $this->get(route('brackets/admin-auth::admin/activation/activate', ['token' => $this->token]));
+        $response = $this->get(route('craftable/admin-auth::admin/activation/activate', ['token' => $this->token]));
         $response->assertStatus(302);
 
         $userNew = TestBracketsUserModel::where('email', 'john@example.com')->first();

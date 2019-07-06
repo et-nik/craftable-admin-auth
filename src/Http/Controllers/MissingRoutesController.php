@@ -13,7 +13,7 @@ class MissingRoutesController extends Controller
      */
     public function redirect(): \Illuminate\Http\RedirectResponse
     {
-        return Redirect::route('brackets/admin-auth::admin/login');
+        return Redirect::route('craftable/admin-auth::admin/login');
     }
 
 }
