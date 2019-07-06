@@ -23,8 +23,8 @@ class AdminAuthServiceProvider extends ServiceProvider
             AdminAuthInstall::class,
         ]);
 
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'brackets/admin-auth');
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'brackets/admin-auth');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'craftable/admin-auth');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'craftable/admin-auth');
 
         $this->app->register(ActivationServiceProvider::class);
         $this->app->register(EventServiceProvider::class);
