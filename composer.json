@@ -1,6 +1,6 @@
 {
     "name": "craftable/admin-auth",
-    "description": "Authentication interface for brackets/admin-ui",
+    "description": "Authentication interface for craftable/admin-ui",
     "keywords": [
         "auth",
         "authentication",
